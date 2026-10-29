@@ -1,0 +1,140 @@
+[
+  {
+    "name": "books",
+    "description": "Search and list A Song of Ice and Fire books filterable by name, release date range (fromReleaseDate/toReleaseDate), with pagination (page, pageSize); returns ISBN, authors, publisher, number of pages, and character lists.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "fromReleaseDate": {
+          "type": "string"
+        },
+        "toReleaseDate": {
+          "type": "string"
+        },
+        "page": {
+          "type": "number"
+        },
+        "pageSize": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "book",
+    "description": "Single book by id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "characters",
+    "description": "Search and list ASOIAF characters filterable by name, culture, birth/death descriptor, gender, and alive status; returns aliases, titles, house affiliations, and book/POV appearances.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "culture": {
+          "type": "string"
+        },
+        "born": {
+          "type": "string"
+        },
+        "died": {
+          "type": "string"
+        },
+        "isAlive": {
+          "type": "boolean"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "page": {
+          "type": "number"
+        },
+        "pageSize": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "character",
+    "description": "Single character by id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "houses",
+    "description": "Search/list houses.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "words": {
+          "type": "string"
+        },
+        "hasTitles": {
+          "type": "boolean"
+        },
+        "hasSeats": {
+          "type": "boolean"
+        },
+        "hasDiedOut": {
+          "type": "boolean"
+        },
+        "hasAncestralWeapons": {
+          "type": "boolean"
+        },
+        "page": {
+          "type": "number"
+        },
+        "pageSize": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  {
+    "name": "house",
+    "description": "Single house by id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  }
+]
